@@ -1,29 +1,4 @@
-🎮 Games Analytics - Multi-User Platform
-📋 Overview
-A secure, multi-user analytics platform using MariaDB and Metabase, containerized with Docker. Designed for different user roles with appropriate permissions.
 
-🏗️ Architecture
-text
-~/games-multi-user/
-├── .env                    # Password file (SECURE - chmod 600)
-├── docker-compose.yml      # Docker configuration
-├── games_backup.sql        # Database backup
-├── SECURE_PASSWORDS.txt    # Password backup (SECURE)
-├── ACCESS_INSTRUCTIONS.txt # Setup guide
-├── init/
-│   └── 01-create-users.sql # User/permissions setup
-├── mysql_data/             # Database storage
-└── metabase_data/          # Metabase storage
-👥 User Roles & Permissions
-Role	Database Access	Metabase Access	Purpose
-Root	Full access (ALL)	N/A	Database administration
-Lecturer	Read-only (SELECT)	Read-only dashboards	Teaching/Viewing data
-Analyst	Read/Write (SELECT, INSERT, UPDATE, DELETE)	Editor access	Data analysis/modification
-Viewer	Restricted read	Possibly restricted	Limited data viewing
-Metabase App	Read-only (SELECT)	Application access	Metabase connection
-🚀 Quick Start
-Linux/Mac:
-bash
 # 1. Navigate to project
 cd ~/games-multi-user
 
